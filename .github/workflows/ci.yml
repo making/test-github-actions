@@ -7,11 +7,6 @@ jobs:
     name: My Job
     runs-on: ubuntu-latest
     steps:
-    - name: Print
-      run: |
-        set -e
-        date > date.txt
-    - name: Show
-      run: |
-        set -e
-        cat date.txt
+    - run: |
+        which kubectl
+        kubectl version
