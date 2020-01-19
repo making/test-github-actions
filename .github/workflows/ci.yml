@@ -20,3 +20,14 @@ jobs:
         java -version
         gu install native-image
         native-image --version
+  build-on-win:
+    runs-on: windows-latest
+    name: build-on-win
+    steps:
+    - uses: actions/checkout@v1
+    - uses: DeLaGuardo/setup-graalvm@1.0
+      with:
+        graalvm-version: '19.2.1'
+    - run: |
+        java -version
+        native-image --version
