@@ -12,8 +12,8 @@ jobs:
         FOO: bar 
       run: |
         set -e
-        env
-        whoami
-        ls -la /usr/local/bin
-        ls -la /usr/bin
-        df -h
+        which docker
+        docker --version
+        docker-compose --version
+        docker ps -a
+        docker images -a
