@@ -7,9 +7,11 @@ jobs:
     name: My Job
     runs-on: ubuntu-latest
     steps:
-    - name: Print a greeting
-      env:
-        FOO: bar 
+    - name: Print
       run: |
         set -e
-        which psql
+        date > date.txt
+    - name: Show
+      run: |
+        set -e
+        cat date.txt
