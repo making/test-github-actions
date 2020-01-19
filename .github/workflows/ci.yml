@@ -13,4 +13,5 @@ jobs:
         graalvm-version: '19.2.1'
     - run: |
         java -version
+        gu install native-image
         which native-image
